@@ -1,0 +1,22 @@
+*{
+    text-align: center;
+    border: none;
+}
+
+.botoes{
+    margin-top: 15px;
+}
+
+button{
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.container{
+    background-color: cyan;
+    width: 320px;
+    padding: 1rem;
+    margin: auto;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    border-radius: 15px;
+}
