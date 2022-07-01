@@ -1,32 +1,19 @@
-let imagem = document.getElementsByTagName("img")[0];
+let img = document.getElementsByTagName("img")[0]
 
-let dados = {
-    botao1: document.getElementsByTagName("button")[0],
-    botao2: document.getElementsByTagName("button")[1],
-    botao3: document.getElementsByTagName("button")[2],
-    botao4: document.getElementsByTagName("button")[3]
+
+let botao = document.getElementById("botoes")
+
+
+function trafficlight( event ){
+   turnOn[event.target.id]();
 }
 
 
-dados.botao1.addEventListener("click", red)
-dados.botao2.addEventListener("click", yellow)
-dados.botao3.addEventListener("click", green)
-dados.botao4.addEventListener("click", random)
-
-function red() {
-    imagem.src = "./images/vermelho.png"
-    
+let turnOn = {
+    red: () => img.src = "./images/vermelho.png",
+    yellow: () => img.src = "./images/amarelo.png",
+    green: ()=> img.src = "./images/verde.png"
 }
 
 
-function yellow() {
-    imagem.src = "./images/amarelo.png"
-    
-}
-
-function green() {
-    imagem.src = "./images/verde.png"
-   
-}
-
-
+botao.addEventListener("click", trafficlight)
